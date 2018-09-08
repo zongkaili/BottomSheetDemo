@@ -11,6 +11,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
+            android:gravity="center"
             android:text="测试文案"
             android:textColor="#333333"
             android:textSize="20sp" />

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.util.SparseArray
 import com.kelly.bottomsheet.R
+import com.kelly.bottomsheet.utils.TextTool
 import kotlinx.android.synthetic.main.viewpager_bottom_guild.view.*
 
 
@@ -31,7 +32,12 @@ class BottomGuideViewPagerAdapter(context: Context) : PagerAdapter() {
             page = mInflater.inflate(R.layout.viewpager_bottom_guild, container, false)
             when (position) {
                 0 -> {
-                    page.viewpagerTitle.text = "测试$position"
+                    TextTool.getBuilder(container.context, "")
+                            .append("测试")
+                            .append("图片\n")
+                            .setResourceId(R.drawable.logo)
+                            .into(page.viewpagerTitle)
+//                    page.viewpagerTitle.text = "测试$position"
                     page.viewpagerContent.setImageResource(R.drawable.ic_launcher_background)
                 }
                 1 -> {
