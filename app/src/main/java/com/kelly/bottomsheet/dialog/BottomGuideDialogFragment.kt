@@ -9,7 +9,6 @@ import com.kelly.bottomsheet.R
 import android.support.v4.view.ViewPager
 import android.support.v7.widget.AppCompatImageView
 import android.util.Log
-import android.widget.ImageView
 
 
 /**
@@ -31,7 +30,7 @@ class BottomGuideDialogFragment : BottomSheetDialogFragment() {
                 override fun onStateChanged(bottomSheet: View, newState: Int) {
                     //在拖拽状态下设置为收缩模式，可去掉默认的拖拽样式
                     if (newState == BottomSheetBehavior.STATE_DRAGGING) {
-//                        behavior.state = BottomSheetBehavior.STATE_COLLAPSED
+                        behavior.state = BottomSheetBehavior.STATE_COLLAPSED
                     }
                 }
 
@@ -57,12 +56,22 @@ class BottomGuideDialogFragment : BottomSheetDialogFragment() {
         val ivClose= bottomSheetDialog.findViewById<AppCompatImageView>(R.id.ivClose)
         Log.d("dialogfragment", " ivClose = $ivClose")
         ivClose.setOnClickListener {
-            Log.d("dialogfragment", " 点击关闭")
-            bottomSheetDialog.dismiss()
+            Log.d("dialogfragment", " 点击关闭 isShowing: ${bottomSheetDialog.isShowing}")
+            if (bottomSheetDialog.isShowing) {
+                bottomSheetDialog.dismiss()
+            }
         }
 
-        val indicator = bottomSheetDialog.findViewById<ViewPagerIndicator>(R.id.vpIndicator)
-        indicator.attachToViewPager(viewPager)
+        //可调整indicator选中和非选中时的大小，且选中的indicator始终在中间
+//        val indicator = bottomSheetDialog.findViewById<ViewPagerIndicator>(R.id.vpIndicator)
+//        indicator.attachToViewPager(viewPager)
+
+        val indicator = bottomSheetDialog.findViewById<CirclePageIndicator>(R.id.vpIndicator)
+        indicator.setViewPager(viewPager)
+    }
+
+    override fun onStart() {
+        super.onStart()
     }
 
     inner class OnViewPageChangeListener: ViewPager.OnPageChangeListener {
