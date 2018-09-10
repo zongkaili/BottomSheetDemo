@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="default_selected_dot_color">#c37210</color>
-    <color name="default_dot_color">#e7b342</color>
+    <color name="default_selected_dot_color">#FD9842</color>
+    <color name="default_dot_color">#E4E4E4</color>
 
 </resources>

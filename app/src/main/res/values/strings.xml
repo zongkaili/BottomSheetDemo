@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">BottomSheetDemo</string>
+
+    <string name="guide_step_0_tip_title">您的利卡卡号为</string>
+    <string name="guide_step_0_copy_card_number">复制卡号</string>
+    <string name="guide_step_0_look_add_card_process">查看添加卡流程</string>
+    <string name="guide_step_0_tip">*该功能只支持华为手机</string>
+    <string name="guide_step_1">1、打开华为钱包</string>
+    <string name="guide_step_2">2、点击“银行卡”所在列的“+”，添加银行卡</string>
+    <string name="guide_step_3">3、点击“手动输入或贴卡读卡”</string>
+    <string name="guide_step_4">4、粘贴利卡卡号，点击“下一步”</string>
+    <string name="guide_step_5">5、输入银行预留手机号及交易密码</string>
+    <string name="guide_step_6">6、输入短信验证码，点击“下一步”，添加成功</string>
+    <string name="guide_step_7_title">如何使用利卡闪付</string>
+    <string name="guide_step_7_1">1、在“华为卡包”页面中，选中利卡卡片</string>
+    <string name="guide_step_7_2">2、任意指纹触摸手机背面的指纹识别器或者在手机开机熄屏状态下将背面摄像头位置靠近POS机</string>
+    <string name="guide_step_7_3">3、在手机背面指纹识别器验证指纹，必要时需输交易密码</string>
+    <string name="guide_step_7_4">4、标有的商家，都可以使用华为钱包</string>
+    <string name="guide_step_8_title">没有打开 华为钱包？</string>
+    <string name="guide_step_8_tip">请确认您的设备支持华为钱包，或者手动\n开启华为钱包</string>
+    <string name="guide_step_8_tip_1"> - 以下设备支持 华为钱包 - </string>
+    <string name="guide_step_8_tip_device">华为手机</string>
+    <string name="guide_step_8_tip_devices">Mate S、荣耀 v8(全网通)、荣耀 v9、Mate、荣耀9(保时捷)、Mate 9 pro、P10、P10 Plus</string>
 </resources>

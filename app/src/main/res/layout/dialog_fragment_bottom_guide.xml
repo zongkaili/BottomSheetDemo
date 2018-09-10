@@ -31,10 +31,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/viewPager"
             android:layout_margin="20dp"
-            android:padding="20dp"
+            app:strokeWidth="0dp"
             app:fillColor="@color/default_selected_dot_color"
             app:pageColor="@color/default_dot_color"
-            app:radius="3dp"
+            app:radius="2.5dp"
             app:snap="false"/>
 
         <android.support.v7.widget.AppCompatImageView
