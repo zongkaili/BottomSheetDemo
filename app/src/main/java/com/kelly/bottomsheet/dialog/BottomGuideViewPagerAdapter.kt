@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.util.SparseArray
 import com.kelly.bottomsheet.R
+import com.kelly.bottomsheet.utils.TextSpanTool
 import kotlinx.android.synthetic.main.viewpager_bottom_guide_style_1.view.*
+import kotlinx.android.synthetic.main.viewpager_bottom_guide_style_2.view.*
 
 
 /**
@@ -65,6 +67,14 @@ class BottomGuideViewPagerAdapter(context: Context) : PagerAdapter() {
                 }
                 6 -> {
                     page = mInflater.inflate(R.layout.viewpager_bottom_guide_style_2, container, false)
+                    TextSpanTool.getBuilder(container.context, "")
+                            .append("4、标有")
+                            .append("*")
+                            .setResourceId(R.drawable.licard_quick_pay_guide_icon_union_pay)
+                            .append("*")
+                            .setResourceId(R.drawable.licard_quick_pay_guide_icon_quickpass)
+                            .append("的商家，都可以使用华为钱包")
+                            .into(page.tv_guide_step_7_4)
                 }
                 7 -> {
                     page = mInflater.inflate(R.layout.viewpager_bottom_guide_style_3, container, false)

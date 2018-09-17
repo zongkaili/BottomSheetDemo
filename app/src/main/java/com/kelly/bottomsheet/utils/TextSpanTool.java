@@ -1,5 +1,27 @@
 package com.kelly.bottomsheet.utils;
-
+/**
+ * 用法示例：
+ * TextSpanTool.getBuilder("").setBold().setAlign(Layout.Alignment.ALIGN_CENTER)
+ * .append("测试").append("Url\n").setUrl(URL_VONTOOLS)
+ * .append("列表项\n").setBullet(60, getResources().getColor(R.color.blue_baby))
+ * .append("  测试引用\n").setQuoteColor(getResources().getColor(R.color.blue_baby))
+ * .append("首行缩进\n").setLeadingMargin(30, 50)
+ * .append("测试").append("上标").setSuperscript().append("下标\n").setSubscript()
+ * .append("测试").append("点击事件\n").setClickSpan(clickableSpan)
+ * .append("测试").append("serif 字体\n").setFontFamily("serif")
+ * .append("测试").append("图片\n").setResourceId(R.drawable.logo)
+ * .append("测试").append("前景色").setForegroundColor(Color.GREEN).append("背景色\n").setBackgroundColor(getResources().getColor(R.color.blue_baby))
+ * .append("测试").append("删除线").setStrikethrough().append("下划线\n").setUnderline()
+ * .append("测试").append("sans-serif 字体\n").setFontFamily("sans-serif")
+ * .append("测试").append("monospace字体\n").setFontFamily("monospace")
+ * .append("测试").append("普通模糊效果字体\n").setBlur(3, BlurMaskFilter.Blur.NORMAL)
+ * .append("测试").append(" 粗体 ").setBold().append(" 斜体 ").setItalic().append(" 粗斜体 \n").setBoldItalic()
+ * .append("测试").append("横向2倍字体\n").setXProportion(2)
+ * .append("\n测试正常对齐\n").setAlign(Layout.Alignment.ALIGN_NORMAL)
+ * .append("测试居中对齐\n").setAlign(Layout.Alignment.ALIGN_CENTER)
+ * .append("测试相反对齐\n").setAlign(Layout.Alignment.ALIGN_OPPOSITE)
+ * .into(mTextView);
+ */
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -37,7 +59,12 @@ import android.widget.TextView;
 
 import static android.graphics.BlurMaskFilter.Blur;
 
-public class TextTool {
+/**
+ * @author zongkaili
+ * @date 2018/9/12
+ * @desc: 此工具类参考自vondear的RxTool，用于处理图文混排的各种显示样式
+ */
+public class TextSpanTool {
     @SuppressLint("StaticFieldLeak")
     private static Context mContext;
 
@@ -515,18 +542,15 @@ public class TextTool {
                     mBuilder.setSpan(new ImageSpan(mContext, bitmap), start, end, flag);
                     bitmap = null;
                     imageIsBitmap = false;
-                }
-                else if (imageIsDrawable) {
+                } else if (imageIsDrawable) {
                     mBuilder.setSpan(new ImageSpan(drawable), start, end, flag);
                     drawable = null;
                     imageIsDrawable = false;
-                }
-                else if (imageIsUri) {
+                } else if (imageIsUri) {
                     mBuilder.setSpan(new ImageSpan(mContext, uri), start, end, flag);
                     uri = null;
                     imageIsUri = false;
-                }
-                else {
+                } else {
                     mBuilder.setSpan(new ImageSpan(mContext, resourceId), start, end, flag);
                     resourceId = 0;
                     imageIsResourceId = false;

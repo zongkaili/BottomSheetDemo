@@ -1,5 +1,6 @@
 package com.kelly.bottomsheet
 
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +23,10 @@ class MainActivity : AppCompatActivity() {
                     bottomGuideDialogFragment.show(supportFragmentManager, BottomGuideDialogFragment::class.java.simpleName)
                 }
             })
+        }
+
+        mBinding.btnTextTest.setOnClickListener {
+            startActivity(Intent(this, ActivityTextTool::class.java))
         }
     }
 }

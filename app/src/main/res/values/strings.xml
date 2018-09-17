@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BottomSheetDemo</string>
 
-    <string name="guide_step_0_tip_title">您的利卡卡号为</string>
+    <string name="guide_step_0_tip_title">您的卡号为</string>
     <string name="guide_step_0_copy_card_number">复制卡号</string>
     <string name="guide_step_0_look_add_card_process">查看添加卡流程</string>
     <string name="guide_step_0_tip">*该功能只支持华为手机</string>
